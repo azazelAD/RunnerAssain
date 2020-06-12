@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Autorunner</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>mq4njje893h0</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>630</width>
+        <height>360</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>MainMenu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">iPhone only</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="BackgroundFirstStage" sid="942503186901025">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="895211090657655">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\AZAZEL\Downloads\ПлиточныйФон.png" />
+        </object-type>
+        <object-type name="FloorFirstStage" sid="706151458830728">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="116897036311761">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="894467356041593">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\AZAZEL\Downloads\Animation 1_1.png" />
+        </object-type>
+        <object-type name="Player" sid="126697502850521">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="772546888313883">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="741085337098898" speed="5">
+                    <frame duration="1" hotspotX="0.54902" hotspotY="0.96" original-source="C:\Users\AZAZEL\Desktop\12\Ran_0.png">
+                        <collision-poly>
+                            <point x="0.327361" y="0.18713" />
+                            <point x="0.762709" y="0.181652" />
+                            <point x="0.769752" y="0.95828" />
+                            <point x="0.354494" y="0.95578" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.961538" original-source="C:\Users\AZAZEL\Desktop\12\Ran_1.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.211538" />
+                            <point x="0.475" y="0.0192308" />
+                            <point x="0.85" y="0.211538" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.709374" y="0.759615" />
+                            <point x="0.721875" y="0.939904" />
+                            <point x="0.278124" y="0.942308" />
+                            <point x="0.2" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.486486" hotspotY="0.978723" original-source="C:\Users\AZAZEL\Desktop\12\Ran_2.png">
+                        <collision-poly>
+                            <point x="0.0810811" y="0.148936" />
+                            <point x="0.432432" y="0.0212766" />
+                            <point x="0.837838" y="0.106383" />
+                            <point x="0.891892" y="0.489362" />
+                            <point x="0.658784" y="0.970745" />
+                            <point x="0.432432" y="0.976064" />
+                            <point x="0.27027" y="0.968085" />
+                            <point x="0.0540541" y="0.489362" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.487805" hotspotY="0.960784" original-source="C:\Users\AZAZEL\Desktop\12\Ran_3.png">
+                        <collision-poly>
+                            <point x="0.195122" y="0.137255" />
+                            <point x="0.512195" y="0.0196078" />
+                            <point x="0.829268" y="0.137255" />
+                            <point x="0.926829" y="0.490196" />
+                            <point x="0.631098" y="0.970588" />
+                            <point x="0.512195" y="0.980392" />
+                            <point x="0.17378" y="0.980392" />
+                            <point x="0.170732" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.962264" original-source="C:\Users\AZAZEL\Desktop\12\Ran_4.png">
+                        <collision-poly>
+                            <point x="0.254545" y="0.264151" />
+                            <point x="0.490909" y="0.0188679" />
+                            <point x="0.818182" y="0.18868" />
+                            <point x="0.981818" y="0.490566" />
+                            <point x="0.702273" y="0.924528" />
+                            <point x="0.529545" y="0.936321" />
+                            <point x="0.361363" y="0.933963" />
+                            <point x="0.327273" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.463415" hotspotY="0.962963" original-source="C:\Users\AZAZEL\Desktop\12\Ran_7.png">
+                        <collision-poly>
+                            <point x="0.146342" y="0.203704" />
+                            <point x="0.439024" y="0.0185185" />
+                            <point x="0.829268" y="0.12963" />
+                            <point x="0.829268" y="0.5" />
+                            <point x="0.710366" y="0.962963" />
+                            <point x="0.439024" y="0.962963" />
+                            <point x="0.286585" y="0.965277" />
+                            <point x="0.195122" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="752639726169765" speed="5">
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.949153" original-source="C:\Users\AZAZEL\Desktop\12\Jump_0.png">
+                        <collision-poly>
+                            <point x="0.212766" y="0.169492" />
+                            <point x="0.489362" y="0.0169492" />
+                            <point x="0.829787" y="0.135593" />
+                            <point x="0.978723" y="0.491525" />
+                            <point x="0.694149" y="0.95339" />
+                            <point x="0.484043" y="0.868644" />
+                            <point x="0.367021" y="0.968221" />
+                            <point x="0.212766" y="0.491525" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.95" original-source="C:\Users\AZAZEL\Desktop\12\Jump_1.png">
+                        <collision-poly>
+                            <point x="0.119047" y="0.1" />
+                            <point x="0.476191" y="0.0333334" />
+                            <point x="0.761905" y="0.166666" />
+                            <point x="0.952381" y="0.5" />
+                            <point x="0.678572" y="0.931251" />
+                            <point x="0.476191" y="0.866666" />
+                            <point x="0.324405" y="0.9875" />
+                            <point x="0.190476" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.584906" hotspotY="0.981481" original-source="C:\Users\AZAZEL\Desktop\12\Jump_2.png">
+                        <collision-poly>
+                            <point x="0.301887" y="0.277778" />
+                            <point x="0.490566" y="0.037037" />
+                            <point x="0.830188" y="0.148148" />
+                            <point x="0.962264" y="0.481481" />
+                            <point x="0.771227" y="0.905093" />
+                            <point x="0.490566" y="0.962963" />
+                            <point x="0.169812" y="0.833334" />
+                            <point x="0.264151" y="0.481481" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.964286" original-source="C:\Users\AZAZEL\Desktop\12\Jump_3.png">
+                        <collision-poly>
+                            <point x="0.314815" y="0.303572" />
+                            <point x="0.481481" y="0.0357143" />
+                            <point x="0.833334" y="0.142858" />
+                            <point x="0.962963" y="0.482143" />
+                            <point x="0.699074" y="0.897321" />
+                            <point x="0.481481" y="0.928572" />
+                            <point x="0.303241" y="0.908483" />
+                            <point x="0.0555556" y="0.482143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="956878018890076">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Keyboard" sid="171278930906965">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TotalDistance" sid="240588113824206">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ObstacleSpikesFirstStage" sid="422127117976467">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="460718238916490">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="471832361447839" speed="5">
+                    <frame duration="1" hotspotX="0.50358" hotspotY="0.508264" original-source="C:\Users\AZAZEL\Downloads\Default_1.png">
+                        <collision-poly>
+                            <point x="0.13986" y="0.350877" />
+                            <point x="0.496504" y="0.192982" />
+                            <point x="0.923077" y="0.192982" />
+                            <point x="1" y="1" />
+                            <point x="0.496504" y="1" />
+                            <point x="0.013986" y="0.964912" />
+                            <point x="0.0699301" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LocalStorage" sid="379346109109663">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="Mouse" sid="546159018445688">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Audio" sid="421463833263258">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="392363800878261">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="BackgroundSecondStage" sid="727563154980735">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="773302707104418">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\AZAZEL\Desktop\rann\бек\PNG\Battleground1\Bright\Battleground1.png" />
+        </object-type>
+        <object-type name="FloorSecondStage" sid="227213715696988">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="262332908331710">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="676703012399601">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\New Files Nick\Game 2D Runner\PNG\Tiles_rock\tile30.png" />
+        </object-type>
+        <object-type name="ObstacleSpikesSecondStage" sid="812616006926689">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="708793325604908">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601543700203497" speed="5">
+                    <frame duration="1" hotspotX="0.501193" hotspotY="0.502222" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PauseButtonFirst" sid="766758934140175">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="PMBackground" sid="557845400294774">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="291108912276110" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AZAZEL\Downloads\a-clear-sky-at-night-2885320.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ContinueButton" sid="347603291205922">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="PauseButtonSecond" sid="824734973469674">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="ToMainMenuButton" sid="455553268935151">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="ExitButton" sid="777811834108043">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite" sid="255765118964318">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535835481498956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500888" original-source="C:\Users\AZAZEL\Downloads\b-s-ruins-art-fantastika-desant-vysadka-planeta.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartGameButton" sid="938679134720864">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="ContinueLastGame" sid="105214003881224">
+            <plugin id="Button" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainMenu.xml</layout>
+        <layout>PauseMenu.xml</layout>
+        <layout>Layout 1.xml</layout>
+        <layout>Layout 2.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>PauseMenuEventSheet.xml</event-sheet>
+        <event-sheet>MainMenuEventSheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="4">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="5" />
+        <global-instance type="LocalStorage" uid="8" />
+        <global-instance type="Mouse" uid="9" />
+        <global-instance type="Audio" uid="10">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="11" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="Runner.ogg" />
+        <file name="Runner.m4a" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

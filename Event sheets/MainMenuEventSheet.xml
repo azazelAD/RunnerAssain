@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenuEventSheet</name>
+    <events>
+        <event-block sid="982196767980272">
+            <conditions>
+                <condition id="0" name="On clicked" sid="837552751989309" type="StartGameButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="580576965605225" type="System">
+                    <param id="0" name="Layout">Layout 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531756558863091">
+            <conditions>
+                <condition id="0" name="On clicked" sid="880682481106108" type="ContinueLastGame" />
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="371988315182866" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331209685130993">
+            <conditions>
+                <condition id="0" name="On clicked" sid="837690394219291" type="ExitButton" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="772926311284110" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="517140302905214">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="304274311756662" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="366296805918120" type="Audio">
+                    <param id="0" name="Audio file">Runner</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

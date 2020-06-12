@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <variable comment="The total distance run so far, in pixels." constant="0" name="TotalScore2" sid="648763404055715" static="0" type="number">0</variable>
+        <variable constant="0" name="BestScore2" sid="965433377888483" static="0" type="number">0</variable>
+        <variable comment="Counts up to &apos;NextBlock&apos;, at which point a new block is created." constant="0" name="CurrentDistance2" sid="674773321732479" static="0" type="number">0</variable>
+        <variable comment="The distance after which to create the next block." constant="0" name="NextBlock2" sid="438845273537789" static="0" type="number">600</variable>
+        <event-block sid="631834880821004">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="302133456743464" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="344569836080549" type="BackgroundSecondStage">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="226389872838622" type="FloorSecondStage">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="238267562187022" type="ObstacleSpikesFirstStage">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="0" name="Play" sid="701467295064103" type="Audio">
+                    <param id="0" name="Audio file">Runner</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="367759927672312">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="247852936920019" type="BackgroundSecondStage">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="663544061352808" type="BackgroundSecondStage">
+                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="471466484016909">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="995212410086718" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="290535572977870" type="Player">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="988518421640198" type="Player">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="444020788710044">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="106328692199829" type="Touch" />
+                <condition id="0" name="On click" sid="950125407900823" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="617616587135894" type="Player">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="552193208933851" type="Player">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="980465181204326">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="268448736451892" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="480175584268653" type="System">
+                    <param id="0" name="Variable">CurrentDistance2</param>
+                    <param id="1" name="Value">FloorSecondStage.Bullet.Speed * dt</param>
+                </action>
+                <action id="-10" name="Add to" sid="235201543333266" type="System">
+                    <param id="0" name="Variable">TotalScore2</param>
+                    <param id="1" name="Value">FloorSecondStage.Bullet.Speed * dt</param>
+                </action>
+                <action id="0" name="Set text" sid="748541274827889" type="TotalDistance">
+                    <param id="0" name="Text">&quot;You scored: &quot; &amp; round(TotalScore2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="755933775787568">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="146139704508065" type="System">
+                    <param id="0" name="Variable">CurrentDistance2</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">NextBlock2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="518870764407952" type="System">
+                    <param id="0" name="Variable">CurrentDistance2</param>
+                    <param id="1" name="Value">NextBlock2</param>
+                </action>
+                <action id="-3" name="Create object" sid="183719731254673" type="System">
+                    <param id="0" name="Object to create">FloorSecondStage</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="655546923815679" type="FloorSecondStage">
+                    <param id="0" name="Width">FloorSecondStage.Width</param>
+                    <param id="1" name="Height">FloorSecondStage.Height</param>
+                </action>
+                <action id="-3" name="Set position" sid="947392889005078" type="FloorSecondStage">
+                    <param id="0" name="X">LayoutWidth</param>
+                    <param id="1" name="Y">LayoutHeight - Self.Height</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="609231274780332" type="FloorSecondStage">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-9" name="Set value" sid="352307193459741" type="System">
+                    <param id="0" name="Variable">NextBlock2</param>
+                    <param id="1" name="Value">FloorSecondStage.Width + 20 + random(200)</param>
+                </action>
+                <action id="-3" name="Create object" sid="837320627954421" type="System">
+                    <param id="0" name="Object to create">ObstacleSpikesSecondStage</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="622194772376351" type="ObstacleSpikesSecondStage">
+                    <param id="0" name="Width">ObstacleSpikesSecondStage.Width+random(10)</param>
+                    <param id="1" name="Height">FloorSecondStage.Height+random(80)</param>
+                </action>
+                <action id="-3" name="Set position" sid="690433964108456" type="ObstacleSpikesSecondStage">
+                    <param id="0" name="X">LayoutWidth+FloorSecondStage.Y + random(20)</param>
+                    <param id="1" name="Y">338</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="995013994477582" type="ObstacleSpikesSecondStage">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="843872454934326">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="311920056728497" type="FloorSecondStage">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-Self.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="345420896109495" type="FloorSecondStage" />
+            </actions>
+        </event-block>
+        <event-block sid="133223645532445">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="183874545487439" type="ObstacleSpikesSecondStage">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-Self.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="211876255450893" type="ObstacleSpikesSecondStage" />
+            </actions>
+        </event-block>
+        <event-block sid="589712885663579">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="279802535467747" type="Player">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">LayoutHeight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="277392620223206" type="System" />
+                <action id="-26" name="Restart layout" sid="376682660561020" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="377359107527253">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="759300461623837" type="Player">
+                    <param id="0" name="Object">ObstacleSpikesSecondStage</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="775800304034508" type="Player" />
+                <action id="-21" name="Reset global variables" sid="810511004937818" type="System" />
+                <action id="-26" name="Restart layout" sid="258143877266485" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="983243582336391">
+            <conditions>
+                <condition id="0" name="On clicked" sid="877200113345705" type="PauseButtonSecond" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="257792637057681" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="715534276916733" type="System">
+                    <param id="0" name="Layout">PauseMenu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

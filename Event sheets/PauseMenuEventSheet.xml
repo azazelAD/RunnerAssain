@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PauseMenuEventSheet</name>
+    <events>
+        <event-block sid="998043650497295">
+            <conditions>
+                <condition id="0" name="On clicked" sid="320298189186665" type="ContinueButton" />
+            </conditions>
+            <actions>
+                <action id="-37" name="Load" sid="770407159449653" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="774636877391782">
+            <conditions>
+                <condition id="0" name="On clicked" sid="390767565355944" type="ToMainMenuButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="861007861435211" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="762509549470704">
+            <conditions>
+                <condition id="0" name="On clicked" sid="789097537036810" type="ExitButton" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="842611055681540" type="Browser" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
